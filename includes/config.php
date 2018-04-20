@@ -7,6 +7,8 @@
      * @var array
      */
     return [
+        'environment' => 'development',
+        
         'development' => [
             'site_title' => 'News Channel',
             'database'   => [
