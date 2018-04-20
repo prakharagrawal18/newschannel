@@ -7,25 +7,25 @@
      * @var array
      */
     return [
-        'environment' => 'development',
-        
-        'development' => [
-            'site_title' => 'News Channel',
-            'database'   => [
-                'host'     => '',
-                'name'     => '',
-                'password' => '',
-                'username' => ''
-            ]
-        ],
+        'environment' => 'development', // The current environment being used in the application.
 
-        'production' => [
+        'development' => [
             'site_title' => 'News Channel',
             'database'   => [
                 'host'     => 'localhost',
                 'name'     => 'newschannel',
                 'password' => '',
                 'username' => 'root'
+            ]
+        ],
+
+        'production' => [
+            'site_title' => 'News Channel',
+            'database'   => [
+                'host'     => '',
+                'name'     => '',
+                'password' => '',
+                'username' => ''
             ]
         ]
     ];
