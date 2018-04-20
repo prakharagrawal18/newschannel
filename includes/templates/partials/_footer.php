@@ -1,3 +1,5 @@
+        </div><!-- #app -->
+
         <footer class="blog-footer py-5 text-center">
             <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             <p>

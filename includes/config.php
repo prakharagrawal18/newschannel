@@ -11,6 +11,7 @@
 
         'development' => [
             'site_title' => 'QuesPaperBank',
+            'site_url'   => 'http://localhost/newschannel',
             'database'   => [
                 'host'     => 'localhost',
                 'name'     => 'newschannel',
@@ -21,6 +22,7 @@
 
         'production' => [
             'site_title' => 'QuesPaperBank',
+            'site_url'   => '',
             'database'   => [
                 'host'     => '',
                 'name'     => '',

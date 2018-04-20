@@ -18,6 +18,22 @@
         return explode('.', $arr);
     }
 
+    function dot_value(string $key, array $arr, $default = '') {
+        $keys = dot($key);
+
+        foreach ($keys as $key) {
+            if (is_array($arr)) {
+                if (! array_key_exists($key, $arr)) {
+                    return $default;
+                }
+
+                $arr = $arr[$key];
+            }
+        }
+
+        return $arr;
+    }
+
     /**
      * Return the configuration value according to the environment being
      * used by the application.
@@ -25,34 +41,24 @@
      * @author Abhishek Prakash <prakashabhishek6262@gmail.com>
      * @since  1.0
      * 
-     * @param  string $name
-     * @param  mixed  $default_value
+     * @param  string $key
+     * @param  mixed  $default
      * 
-     * @return string
+     * @return mixed
      */
-    function config(string $name, $default_value = '') : string {
-        $config = require_once( INCLUDES_PATH  . '/config.php');
+    function config(string $key, $default = '') {
+        $config = require( INCLUDES_PATH  . '/config.php' );
 
         $environment = $config['environment'];
         $config      = $config[$environment];
 
-        $setting = dot($name);
+        $value = dot_value($key, $config, null);
 
-        // foreach($setting as $key) {
-        //     if (is_array($config)) {
-        //         if (! array_key_exists($key, $config)) {
-        //             return $default_value;
-        //         }
-    
-        //         $config = $config[$key];
-        //     }
-        // }
+        if ($value === null) {
+            return $default;
+        }
 
-        // if ($config === null) {
-        //     return $default_value;
-        // }
-
-        return 'QuesPaperBank';
+        return $value;
     }
 
     /**
