@@ -10,7 +10,7 @@
         'environment' => 'development', // The current environment being used in the application.
 
         'development' => [
-            'site_title' => 'News Channel',
+            'site_title' => 'QuesPaperBank',
             'database'   => [
                 'host'     => 'localhost',
                 'name'     => 'newschannel',
@@ -20,7 +20,7 @@
         ],
 
         'production' => [
-            'site_title' => 'News Channel',
+            'site_title' => 'QuesPaperBank',
             'database'   => [
                 'host'     => '',
                 'name'     => '',
